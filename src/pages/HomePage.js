@@ -1,7 +1,6 @@
 import React from 'react';
-import CreatePost from '../components/CreatePost';
-import PostView from '../components/PostView';
 import Navbars from '../components/NavBars';
+import ListarPost from '../components/ListarPost';
 import '../css/post.css';
 
 export default class HomePage extends React.Component{
@@ -17,16 +16,8 @@ export default class HomePage extends React.Component{
 	render(){
 		return(
 			<div>
-			<Navbars/>
-			    <div className="container gedf-wrapper">
-			        <div className="row">
-			            <div className="col-md-8 gedf-main">
-			            	<CreatePost />
-			                
-			        	</div>
-					</div>
-					<PostView />
-				</div>
+				<Navbars/>
+			    <ListarPost/>
 			</div>
 		);
 	}

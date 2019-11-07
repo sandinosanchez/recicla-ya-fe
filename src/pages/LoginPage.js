@@ -1,7 +1,6 @@
 import React from 'react';
 import LoginForm from '../components/LoginForm';
-import NavBar from '../components/NavBars';
-import Footer from '../components/Footer';
+import ImgReciclar from '../images/vector-a-recycle-logo-on-nature-globe.jpg';
 export default class LoginPage extends React.Component {
 	state={
 		data:{}
@@ -42,14 +41,23 @@ export default class LoginPage extends React.Component {
 			this.props.history.push("/")
 		}
 	}
+	estilos() {
+		return{
+			background:"#fff"
+		}
+	}
 
 	render(){
 		return(
-			<div>
-				<NavBar/>
-				<LoginForm Cancelar={this.Cancelar} hendlerChange={this.hendlerChange} hendlerSubmitLogin={this.hendlerSubmitLogin}/>
-				<Footer/>
-			</div>
+			
+			<div className="row" style={this.estilos()}>
+				<div className="col-6">
+					<img className="container m-3" src={ImgReciclar } alt="" width="100%"/>
+				</div>
+				<div className="col-6">
+					<LoginForm Cancelar={this.Cancelar} hendlerChange={this.hendlerChange} hendlerSubmitLogin={this.hendlerSubmitLogin}/>
+				</div>
+			</div>	
 		);
 	}
 }
