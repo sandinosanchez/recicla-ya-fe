@@ -22,10 +22,10 @@ export default class HomePage extends React.Component{
 			        <div className="row">
 			            <div className="col-md-8 gedf-main">
 			            	<CreatePost />
-			                
+			                <PostView />
 			        	</div>
 					</div>
-					<PostView />
+					
 				</div>
 			</div>
 		);
