@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import RegistroForm from '../components/RegitroForm';
+import NavBar from '../components/NavBars';
 export default class RegistroPage extends Component {
     state={
         data:{}
@@ -20,6 +21,7 @@ export default class RegistroPage extends Component {
     render() {
         return (
             <div>
+            <NavBar/>
                 <RegistroForm hendlerChange={this.hendlerChange} hendlerSubmitRegistro={this.hendlerSubmitRegistro} />  
             </div>
         )
